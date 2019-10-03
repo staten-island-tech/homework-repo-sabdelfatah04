@@ -20,7 +20,9 @@ const list = Array.from(document.querySelectorAll('li'));
     const listTimeSeconds = listTime.map(time => {
       const code = time.split(':');
       //console.log(code);
-      return Number(code[0]*60) + Number(code[1]);
+      return (parseInt(code[0]*60)) + parseInt(code[1]);
     })    // map to an array of seconds, 
-
+    .reduce ((acc, val) => {
+      return acc + val;
+    }) ////*new from class
     console.log(listTimeSeconds); 
