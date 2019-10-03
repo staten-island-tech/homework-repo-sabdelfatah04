@@ -18,9 +18,9 @@ const list = Array.from(document.querySelectorAll('li'));
   
     
     const listTimeSeconds = listTime.map(timeCode => {
-      const parts = timeCode.split(':');
-      //console.log(parts);
-      return Number(parts[0]*60) + Number(parts[1]);
+      const code = timeCode.split(':');
+      //console.log(code);
+      return Number(code[0]*60) + Number(code[1]);
     })    // map to an array of seconds, 
 
     console.log(listTimeSeconds); 
